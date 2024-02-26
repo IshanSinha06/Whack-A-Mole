@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Description popup -->
+    <div class="popUp" id="popUp">
+      <h2>How to Play</h2>
+      <ul>
+        <li>You have 45 seconds</li>
+        <li>Hit the mole to gain 10 points.</li>
+        <li>Do not hit the rat.</li>
+      </ul>
+      <input type="text" , placeholder="Enter Name" id="username" />
+      <button type="submit" class="submit">Submit</button>
+    </div>
+
+    <!-- Highscore popup -->
+    <div class="popup" id="highScorePopup">
+      <h2 id="yourScore"></h2>
+      <h2>High Scores</h2>
+      <p id="message"></p>
+      <div id="scores"></div>
+      <button id="ok">OK</button>
+    </div>
+
+    <!-- <div id="gamecontent"> -->
+    <div id="main">
+      <div class="heading">
+        <h1 class="header">Whack-A-Mole</h1>
+        <div class="score-lvl">
+          <p>Level <span id="level">1</span></p>
+          <span id="timer">Seconds Left</span>
+          <h3 id="score">0</h3>
+        </div>
+      </div>
+      <div id="container"></div>
+
+      <div>
+        <input type="reset" value="Reset" id="reset" />
+      </div>
+    </div>
+
+    <div class="cursor"><img src="hammer.png" alt="" /></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

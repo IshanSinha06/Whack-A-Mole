@@ -1,0 +1,210 @@
+body,
+html {
+  background-color: black;
+  font-family: E4-Digital-Arcade;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+
+/* cursor hammer */
+.cursor img {
+  position: absolute;
+  height: 120px;
+
+  /* Transform aligns the hammer with the cursor */
+  transform: translate(-40px, -30px);
+  pointer-events: none;
+}
+
+/* Hit animation */
+@keyframes hit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+/*New High score display message */
+.high-score {
+  color: green;
+  font-family: E4-Digital-Arcade;
+  font-size: 15px;
+}
+
+/* Initial popup for description and to enter name. */
+.popUp {
+  width: 540px;
+  height: 240px;
+  /* background-color: red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  background-color: black;
+  color: brown;
+  border: 3px solid blue;
+  transition: transform 0.8s;
+  visibility: hidden;
+}
+
+.popUp h2 {
+  color: rgb(249, 51, 51);
+}
+
+.popUp button {
+  padding: 5px;
+  background: transparent;
+  border: none;
+  color: whitesmoke;
+  font-family: E4-Digital-Arcade;
+}
+
+.open-Popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Initial High Score popup */
+.popup {
+  width: 540px;
+  height: 540px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: black;
+  color: brown;
+  border: 2px solid white;
+  display: none;
+  border-radius: 15px;
+}
+
+.popup h2 {
+  color: blue;
+}
+
+.popup button {
+  margin-bottom: 5px;
+  background-color: red;
+}
+
+#highScorePopup #scores {
+  height: 50%;
+  line-height: 3;
+  display: block;
+  color: white;
+  overflow: hidden;
+}
+
+.popup button {
+  padding: 5px;
+  background: transparent;
+  border: none;
+  color: rgb(180, 255, 66);
+  font-family: E4-Digital-Arcade;
+  font-size: 20px;
+}
+
+.open-HighScore-popup {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+}
+
+#username {
+  height: 70px;
+  width: 80%;
+  background: transparent;
+  font-family: E4-Digital-Arcade;
+  text-align: center;
+  color: yellow;
+  border: none;
+  font-size: 1.5rem;
+  /* background-color: red; */
+}
+
+.main {
+  display: block;
+}
+
+.header {
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 4.5rem;
+  background-color: green;
+  letter-spacing: 8px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 70%;
+}
+
+.score-lvl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#timer {
+  width: 100px;
+  text-align: center;
+}
+
+.score-lvl p {
+  color: white;
+}
+
+#score {
+  color: red;
+  text-align: center;
+}
+
+/* For the box container where the game is set. */
+#container {
+  background: url(https://img.freepik.com/free-vector/brown-soil-texture-background_1308-20483.jpg);
+  width: 540px;
+  height: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-size: cover;
+  border: 2px solid rgb(162, 57, 57);
+
+  /* To hide the cursor pointer when it hovers over the container.*/
+  cursor: none;
+}
+
+/* For the holes inside the container */
+#container div {
+  width: 180px;
+  height: 180px;
+  background: url(https://thumbs.dreamstime.com/b/mole-hole-illustration-clipart-image-210307988.jpg);
+  background-size: cover;
+}
+
+#container div img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#reset {
+  font-family: E4-Digital-Arcade;
+  margin-top: 5px;
+  width: 200px;
+  color: brown;
+  background-color: transparent;
+}
+
+#timer {
+  font-family: E4-Digital-Arcade;
+  margin-top: 5px;
+  width: 200px;
+  color: red;
+  background-color: transparent;
+}
